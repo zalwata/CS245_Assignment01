@@ -31,7 +31,7 @@ public class SelectionSort {
      * swap index positions of two values in the array
      * @return array after the swap
      */
-    public  int[] swap(int[] inputArray, int startVal , int endVal)
+    public int[] swap(int[] inputArray, int startVal , int endVal)
     {
         int tempVal = inputArray[startVal];
         inputArray[startVal] = inputArray [endVal];
