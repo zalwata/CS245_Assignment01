@@ -1,6 +1,6 @@
 public class BubbleSort {
 
-    public void bubbleSort(int[] randomArray, int start, int end)
+    public void bubbleSort(int[] randomArray)
     {
         for(int lastUnsortedIndex = randomArray.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--)
         {
@@ -12,10 +12,6 @@ public class BubbleSort {
                 }
             }
         }
-    }
-
-    public static void main(String[] args) {
-
     }
 
     public void swap(int[] array, int i, int j)
