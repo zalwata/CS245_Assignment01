@@ -85,7 +85,6 @@ public class MergeSort {
             {
                 partitioningArray[partitioningIndex++] = testingArray[rightPartitionIndex++];
             }
-            //partitioningArray[partitioningIndex++] = testingArray[leftPartitionIndex] <= testingArray[rightPartitionIndex] ? testingArray[leftPartitionIndex++] : testingArray[rightPartitionIndex++];
         }
 
         System.arraycopy(testingArray, leftPartitionIndex, testingArray, leftValue + partitioningIndex,
