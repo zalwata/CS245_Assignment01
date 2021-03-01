@@ -3,101 +3,116 @@ import java.util.Random;
 public class SortingRunTimeTester {
 
     public static int ARRAYS_LENGTHS = 50000;
-    public static int[] list = new int[ARRAYS_LENGTHS];
+    public static int[] testingArray = new int[ARRAYS_LENGTHS];
 
-    //record run time for bubble sort
-    public static double bubbleSortEfficiencyTesting(int[] list)
+    /**
+     * runs bubble sort algorithm with the same testing array with random values
+     * @return measured time in milli seconds
+     */
+    public static long bubbleSortEfficiencyTesting(int[] testingArray)
     {
-        long startTime, endTime;
-        double duration;
-        BubbleSort sorter = new BubbleSort();
-
-        startTime = System.currentTimeMillis();
-        sorter.bubbleSort(list);
-        endTime = System.currentTimeMillis();
-        duration = ((double) (endTime - startTime)) / ARRAYS_LENGTHS;
-        return duration;
+        long recordingStartTime = 0;
+        long recordingEndTime = 0;
+        long algorithmRunTime = 0;
+        BubbleSort sortingAlgorithmObj = new BubbleSort();
+        recordingStartTime = System.currentTimeMillis();
+        sortingAlgorithmObj.bubbleSort(testingArray);
+        recordingEndTime = System.currentTimeMillis();
+        algorithmRunTime = ((recordingEndTime - recordingStartTime)) / ARRAYS_LENGTHS;
+        return algorithmRunTime;
     }
 
-    //record run time for insertion sort
-    public static double insertionSortEfficiencyTesting(int[] list)
+    /**
+     * runs insertion sort algorithm with the same testing array with random values
+     * @return measured time in milli seconds
+     */
+    public static double insertionSortEfficiencyTesting(int[] testingArray)
     {
-        long startTime, endTime;
-        double duration;
-        InsertionSort sorter = new InsertionSort();
-
-        startTime = System.currentTimeMillis();
-        sorter.insertionSort(list);
-        endTime = System.currentTimeMillis();
-        duration = ((double) (endTime - startTime)) / ARRAYS_LENGTHS;
-        return duration;
+        long recordingStartTime = 0;
+        long recordingEndTime = 0;
+        long algorithmRunTime = 0;
+        InsertionSort sortingAlgorithmObj = new InsertionSort();
+        recordingStartTime = System.currentTimeMillis();
+        sortingAlgorithmObj.insertionSort(testingArray);
+        recordingEndTime = System.currentTimeMillis();
+        algorithmRunTime = ((recordingEndTime - recordingStartTime)) / ARRAYS_LENGTHS;
+        return algorithmRunTime;
     }
 
-    //record run time for selection sort
-    public static double selectionSortEfficiencyTesting(int[] list)
+    /**
+     * runs selection sort algorithm with the same testing array with random values
+     * @return measured time in milli seconds
+     */
+    public static double selectionSortEfficiencyTesting(int[] testingArray)
     {
-        long startTime, endTime;
-        double duration;
-        SelectionSort sorter = new SelectionSort();
-
-        startTime = System.currentTimeMillis();
-        sorter.selectionSort(list);
-        endTime = System.currentTimeMillis();
-        duration = ((double) (endTime - startTime)) / ARRAYS_LENGTHS;
-        return duration;
+        long recordingStartTime = 0;
+        long recordingEndTime = 0;
+        long algorithmRunTime = 0;
+        SelectionSort sortingAlgorithmObj = new SelectionSort();
+        recordingStartTime = System.currentTimeMillis();
+        sortingAlgorithmObj.selectionSort(testingArray);
+        recordingEndTime = System.currentTimeMillis();
+        algorithmRunTime = ((recordingEndTime - recordingStartTime)) / ARRAYS_LENGTHS;
+        return algorithmRunTime;
     }
 
-    //record run time for merge sort
-    public static double mergeSortEfficiencyTesting(int[] list)
+    /**
+     * runs merge sort algorithm with the same testing array with random values
+     * @return measured time in milli seconds
+     */
+    public static double mergeSortEfficiencyTesting(int[] testingArray)
     {
-        long startTime, endTime;
-        double duration;
-        MergeSort sorter = new MergeSort();
-
-        startTime = System.currentTimeMillis();
-        sorter.mergeSort(list);
-        endTime = System.currentTimeMillis();
-        duration = ((double) (endTime - startTime)) / ARRAYS_LENGTHS;
-        return duration;
+        long recordingStartTime = 0;
+        long recordingEndTime = 0;
+        long algorithmRunTime = 0;
+        MergeSort sortingAlgorithmObj = new MergeSort();
+        recordingStartTime = System.currentTimeMillis();
+        sortingAlgorithmObj.mergeSort(testingArray);
+        recordingEndTime = System.currentTimeMillis();
+        algorithmRunTime = ((recordingEndTime - recordingStartTime)) / ARRAYS_LENGTHS;
+        return algorithmRunTime;
     }
 
-    //record run time for quick sort
-    public static double quickSortEfficiencyTesting(int[] list)
+    /**
+     * runs quick sort algorithm with the same testing array with random values
+     * @return measured time in milli seconds
+     */
+    public static double quickSortEfficiencyTesting(int[] testingArray)
     {
-        long startTime, endTime;
-        double duration;
-        QuickSort sorter = new QuickSort();
-
-        startTime = System.currentTimeMillis();
-        sorter.quickSort(list);
-        endTime = System.currentTimeMillis();
-        duration = ((double) (endTime - startTime)) / ARRAYS_LENGTHS;
-        return duration;
+        long recordingStartTime = 0;
+        long recordingEndTime = 0;
+        long algorithmRunTime = 0;
+        QuickSort sortingAlgorithmObj = new QuickSort();
+        recordingStartTime = System.currentTimeMillis();
+        sortingAlgorithmObj.quickSort(testingArray);
+        recordingEndTime = System.currentTimeMillis();
+        algorithmRunTime = ((recordingEndTime - recordingStartTime)) / ARRAYS_LENGTHS;
+        return algorithmRunTime;
     }
 
     //generate array with random values
-    public static int[] createRandomArray(int[] list)
+    public static int[] createRandomArray(int[] testingArray)
     {
-        list = new int[ARRAYS_LENGTHS];
-        Random randomGenerator = new Random();
+        testingArray = new int[ARRAYS_LENGTHS];
+        Random randomValueGenerator = new Random();
         for(int i=0;i < ARRAYS_LENGTHS;i++)
         {
-            list[i] = randomGenerator.nextInt();
+            testingArray[i] = randomValueGenerator.nextInt();
         }
-        return list;
+        return testingArray;
     }
 
-    public static void main(String a[]) {
+    public static void main(String args[]) {
 
         //run time analysis on each sorting algorithm
         for(int i = 0; i < 10; i++)
         {
-            list = createRandomArray(list);
-            int[] listClone1 = list.clone();
-            int[] listClone2 = list.clone();
-            int[] listClone3 = list.clone();
-            int[] listClone4 = list.clone();
-            int[] listClone5 = list.clone();
+            testingArray = createRandomArray(testingArray);
+            int[] listClone1 = testingArray.clone();
+            int[] listClone2 = testingArray.clone();
+            int[] listClone3 = testingArray.clone();
+            int[] listClone4 = testingArray.clone();
+            int[] listClone5 = testingArray.clone();
 
             System.out.println("array size: " + ARRAYS_LENGTHS + "---------------------------------------------------");
             System.out.print("bubble sort run-time(ms):    ");
