@@ -22,46 +22,92 @@
 
 public class QuickSort {
 
+//    //lecture code
+//    void quicksort(double[] arr, int bot, int top)
+//    {
+//        if(bot < top)
+//        {
+//            int p = partition(arr, bot, top);
+//            quicksort(arr, bot, p-1);
+//            quicksort(arr, p+1, top);
+//        }
+//    }
+//    int partition(double[] arr, int left, int right)
+//    {
+//        if(left < right)
+//        {
+//            int pivot = left;
+//            int bot = left + 1;
+//            int top = right;
+//            while(bot < top){
+//                while(bot <= right && arr[bot] <= arr[pivot])
+//                {
+//                    ++bot;
+//                }
+//                while(top >= bot && arr[top] > arr[pivot])
+//                {
+//                    --top;
+//                }
+//                if(bot <= right && bot < top)
+//                {
+//                    swap(arr, bot, top);
+//                }
+//            }
+//            swap (arr, pivot, top);
+//            return top;
+//        }
+//        return left;
+//    }
 
+    /**
+     * initialize quick sort
+     * @void
+     */
     public void quickSort(int[] randomArray)
     {
         quickSort(randomArray, 0, randomArray.length);
     }
 
-    public static void quickSort(int[] input, int start, int end) {
-        if (end - start < 2) {
+    /**
+     * recursive divide-and-conquer(split and merge) like merge sort
+     * pick pivot from median value
+     * @void
+     */
+    public void quickSort(int[] testingArray, int leftValue, int rightValue) {
+        int medianPivotIndex = 0;
+        if (rightValue - leftValue < 2) {
             return;
         }
-
-        int pivotIndex = partition(input, start, end);
-        quickSort(input, start, pivotIndex);
-        quickSort(input, pivotIndex + 1, end);
+        medianPivotIndex = partitionAroundThePivot(testingArray, leftValue, rightValue);
+        quickSort(testingArray, leftValue, medianPivotIndex);
+        quickSort(testingArray, medianPivotIndex + 1, rightValue);
     }
 
-    public static int partition(int[] input, int start, int end) {
-        // This is using the first element as the pivot
-        int pivot = input[start];
-        int i = start;
-        int j = end;
-
-        while (i < j) {
-
-            // NOTE: empty loop body
-            while (i < j && input[--j] >= pivot);
-            if (i < j) {
-                input[i] = input[j];
+    /**
+     * checks to make sure items in the array are arranged
+     * count up from bot until a value greater than the pivot is found
+     * count down from top until a value less than or equal to pivot is found
+     * swap the top/bot values
+     * move pivot to testingArray[top]
+     * @void
+     */
+    public int partitionAroundThePivot(int[] testingArray, int leftValue, int rightValue) {
+        int pivot = testingArray[leftValue];
+        int bot = leftValue;
+        int top = rightValue;
+        while (bot < top) {
+            while ((bot < top)
+                    && (testingArray[--top] >= pivot));
+            if (bot < top) {
+                testingArray[bot] = testingArray[top];
             }
-
-            // NOTE: empty loop body
-            while (i < j && input[++i] <= pivot);
-            if (i < j) {
-                input[j] = input[i];
+            while ((bot < top)
+                    && (testingArray[++bot] <= pivot));
+            if (bot < top) {
+                testingArray[top] = testingArray[bot];
             }
-
         }
-
-        input[j] = pivot;
-        return j;
-
+        testingArray[top] = pivot;
+        return top;
     }
 }
