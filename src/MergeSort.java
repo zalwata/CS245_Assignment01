@@ -11,40 +11,92 @@
 
 public class MergeSort {
 
-    public void mergeSortInit(int[] input, int start, int end)
+    /*
+    lecture code
+    double[] get_left(double[] arr)
     {
-        if(end - start < 2)
+        int size = arr.length/2;
+        double[] left = new double[size];
+        for(int i = 0; i < size; i++)
+        {
+            left[i] = arr[i];
+        }
+        return left;
+    }
+
+//    void mergesort(double[] arr)
+//    {
+//        if(arr.length > 1)
+//        {
+//            double[] left = get_left(arr);
+//            double[] right = get_right(arr);
+//            mergesort(left);
+//            mergesort(right);
+//            merge(arr,left, right);
+//        }
+//    }
+
+     */
+
+    /**
+     * redistribute merge sort algorithm to make sure items in the array are arranged
+     * @void
+     */
+    public void mergeSortInit(int[] testingArray, int leftValue, int rightValue)
+    {
+        int middleValue = 0;
+        //base case for organizing
+        if(rightValue - leftValue < 2)
         {
             return;
         }
-
-        int mid = (start + end)/2;
-        mergeSortInit(input, start, mid);
-        mergeSortInit(input, mid, end);
-        merge(input, start, mid, end);
+        middleValue = (leftValue + rightValue)/2;
+        mergeSortInit(testingArray, leftValue, middleValue);
+        mergeSortInit(testingArray, middleValue, rightValue);
+        mergeThePartitionedArrays(testingArray, leftValue, middleValue, rightValue);
     }
 
-    public void merge(int[] input, int start, int mid, int end)
+    /**
+     * checks to make sure items in the array are arranged from left to right (least to greatest)
+     * then merge two adjacent sub-arrays, keeping sorted order
+     * @void
+     */
+    public void mergeThePartitionedArrays(int[] testingArray, int leftValue, int middleValue, int rightValue)
     {
-        if(input[mid - 1] <= input[mid])
+        int partitioningIndex = 0;
+        int leftPartitionIndex = 0;
+        int rightPartitionIndex = 0;
+        int[] partitioningArray;
+        if(testingArray[middleValue - 1] <= testingArray[middleValue])
         {
             return;
         }
-
-        int i = start;
-        int j = mid;
-        int tempIndex = 0;
-
-        int[] temp = new int[end - start];
-        while(i < mid && j < end)
+        leftPartitionIndex = leftValue;
+        rightPartitionIndex = middleValue;
+        partitioningArray = new int[rightValue - leftValue];
+        while((leftPartitionIndex < middleValue) && (rightPartitionIndex < rightValue))
         {
-            temp[tempIndex++] = input[i] <= input[j] ? input[i++] : input[j++];
+            if(testingArray[leftPartitionIndex] <= testingArray[rightPartitionIndex])
+            {
+                partitioningArray[partitioningIndex++] = testingArray[leftPartitionIndex++];
+            }
+            if((testingArray[leftPartitionIndex] != testingArray[rightPartitionIndex])
+                    || (testingArray[leftPartitionIndex] > testingArray[rightPartitionIndex]))
+            {
+                partitioningArray[partitioningIndex++] = testingArray[rightPartitionIndex++];
+            }
+            //partitioningArray[partitioningIndex++] = testingArray[leftPartitionIndex] <= testingArray[rightPartitionIndex] ? testingArray[leftPartitionIndex++] : testingArray[rightPartitionIndex++];
         }
 
-        System.arraycopy(input, i, input, start + tempIndex, mid - i);
-        System.arraycopy(temp, 0, input, start, tempIndex);
+        System.arraycopy(testingArray, leftPartitionIndex, testingArray, leftValue + partitioningIndex,
+                middleValue - leftPartitionIndex);
+        System.arraycopy(partitioningArray, 0, testingArray, leftValue, partitioningIndex);
     }
 
+    /**
+     * initialize merge sort
+     * @void
+     */
     public void mergeSort(int[] randomArray)
     {
         mergeSortInit(randomArray, 0, randomArray.length);
