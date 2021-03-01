@@ -33,18 +33,22 @@ public class InsertionSort {
 //        return -1;
 //    }
 
+    /**
+     * initialize insertion sort algorithm
+     * @void
+     */
     public void insertionSort(int[] randomArray)
     {
-        for(int firstUnsortedIndex = 1; firstUnsortedIndex < randomArray.length; firstUnsortedIndex++)
+        int i = 0;
+        int newValue = 0;
+        for(int unsorted = 1; unsorted < randomArray.length; unsorted++)
         {
-            int newElement = randomArray[firstUnsortedIndex];
-            int i ;
-            for(i = firstUnsortedIndex; i > 0 && randomArray[i - 1] > newElement; i--)
+            newValue = randomArray[unsorted];
+            for(i = unsorted; i > 0 && randomArray[i - 1] > newValue; i--)
             {
                 randomArray[i] = randomArray[i - 1];
             }
-
-            randomArray[i] = newElement;
+            randomArray[i] = newValue;
         }
     }
 }
