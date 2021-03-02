@@ -9,11 +9,11 @@ public class SortingRunTimeTester {
      * runs bubble sort algorithm with the same testing array with random values
      * @return measured time in milli seconds
      */
-    public static long bubbleSortEfficiencyTesting(int[] testingArray)
+    public static double bubbleSortEfficiencyTesting(int[] testingArray)
     {
-        long recordingStartTime = 0;
-        long recordingEndTime = 0;
-        long algorithmRunTime = 0;
+        double recordingStartTime = 0;
+        double recordingEndTime = 0;
+        double algorithmRunTime = 0;
         BubbleSort sortingAlgorithmObj = new BubbleSort();
         recordingStartTime = System.currentTimeMillis();
         sortingAlgorithmObj.bubbleSort(testingArray);
@@ -28,9 +28,9 @@ public class SortingRunTimeTester {
      */
     public static double insertionSortEfficiencyTesting(int[] testingArray)
     {
-        long recordingStartTime = 0;
-        long recordingEndTime = 0;
-        long algorithmRunTime = 0;
+        double recordingStartTime = 0;
+        double recordingEndTime = 0;
+        double algorithmRunTime = 0;
         InsertionSort sortingAlgorithmObj = new InsertionSort();
         recordingStartTime = System.currentTimeMillis();
         sortingAlgorithmObj.insertionSort(testingArray);
@@ -45,9 +45,9 @@ public class SortingRunTimeTester {
      */
     public static double selectionSortEfficiencyTesting(int[] testingArray)
     {
-        long recordingStartTime = 0;
-        long recordingEndTime = 0;
-        long algorithmRunTime = 0;
+        double recordingStartTime = 0;
+        double recordingEndTime = 0;
+        double algorithmRunTime = 0;
         SelectionSort sortingAlgorithmObj = new SelectionSort();
         recordingStartTime = System.currentTimeMillis();
         sortingAlgorithmObj.selectionSort(testingArray);
@@ -62,9 +62,9 @@ public class SortingRunTimeTester {
      */
     public static double mergeSortEfficiencyTesting(int[] testingArray)
     {
-        long recordingStartTime = 0;
-        long recordingEndTime = 0;
-        long algorithmRunTime = 0;
+        double recordingStartTime = 0;
+        double recordingEndTime = 0;
+        double algorithmRunTime = 0;
         MergeSort sortingAlgorithmObj = new MergeSort();
         recordingStartTime = System.currentTimeMillis();
         sortingAlgorithmObj.mergeSort(testingArray);
@@ -79,9 +79,9 @@ public class SortingRunTimeTester {
      */
     public static double quickSortEfficiencyTesting(int[] testingArray)
     {
-        long recordingStartTime = 0;
-        long recordingEndTime = 0;
-        long algorithmRunTime = 0;
+        double recordingStartTime = 0;
+        double recordingEndTime = 0;
+        double algorithmRunTime = 0;
         QuickSort sortingAlgorithmObj = new QuickSort();
         recordingStartTime = System.currentTimeMillis();
         sortingAlgorithmObj.quickSort(testingArray);
