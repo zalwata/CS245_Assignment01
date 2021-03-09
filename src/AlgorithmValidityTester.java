@@ -1,8 +1,6 @@
-import java.util.Random;
-
 public class AlgorithmValidityTester {
 
-    public static int ARRAYS_LENGTHS = 5;
+    public static int ARRAYS_LENGTHS = 8;
 
     /**
      * runs bubble sort algorithm with the same testing array with random values
@@ -114,15 +112,39 @@ public class AlgorithmValidityTester {
         System.out.println("]");
     }
 
+    /**
+     * runs quick sort algorithm with the same testing array with random values
+     * to make sure this sorting algorithm produce same output as other algorithms
+     * @void
+     */
+    public static void randomisedQuickSortValidityTesting(double[] testingArray)
+    {
+        Part2_1RandomizedQuicksort sortingAlgorithmObj = new Part2_1RandomizedQuicksort();
+        sortingAlgorithmObj.randomisedQuicksort(testingArray);
+        System.out.println("random array after sorting--------------------------------------------RANDOMISEDQUICKSORT");
+        System.out.print("[");
+        for(int i=0;i < ARRAYS_LENGTHS;i++)
+        {
+            System.out.print(testingArray[i]);
+            if(i != (ARRAYS_LENGTHS - 1))
+            {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+
     public static void main(String[] args) {
 
         //generate array with random values
-        int[] testingArray = new int[ARRAYS_LENGTHS];
-        Random randomValueGenerator = new Random();
-        for(int i=0;i < ARRAYS_LENGTHS;i++)
-        {
-            testingArray[i] = randomValueGenerator.nextInt();
-        }
+        double[] testingArray = new double[]{5,2,9,12,6,8,3,7};
+
+//        int[] testingArray = new int[ARRAYS_LENGTHS];
+//        Random randomValueGenerator = new Random();
+//        for(int i=0;i < ARRAYS_LENGTHS;i++)
+//        {
+//            testingArray[i] = randomValueGenerator.nextInt();
+//        }
 
         System.out.println("array size: " + AlgorithmValidityTester.ARRAYS_LENGTHS);
         //print the random array before sorting
@@ -139,17 +161,20 @@ public class AlgorithmValidityTester {
         System.out.println("]");
 
         //run time analysis on each sorting algorithm
-        int[] listClone1 = testingArray.clone();
-        int[] listClone2 = testingArray.clone();
-        int[] listClone3 = testingArray.clone();
-        int[] listClone4 = testingArray.clone();
-        int[] listClone5 = testingArray.clone();
+//        int[] listClone1 = testingArray.clone();
+//        int[] listClone2 = testingArray.clone();
+//        int[] listClone3 = testingArray.clone();
+//        int[] listClone4 = testingArray.clone();
+//        int[] listClone5 = testingArray.clone();
+        double[] listClone6 = testingArray.clone();
 
-        bubbleSortValidityTesting(listClone1);
-        insertionSortValidityTesting(listClone2);
-        selectionSortValidityTesting(listClone3);
-        mergeSortValidityTesting(listClone4);
-        quickSortValidityTesting(listClone5);
+
+//        bubbleSortValidityTesting(listClone1);
+//        insertionSortValidityTesting(listClone2);
+//        selectionSortValidityTesting(listClone3);
+//        mergeSortValidityTesting(listClone4);
+//        quickSortValidityTesting(listClone5);
+        randomisedQuickSortValidityTesting(listClone6);
     }
 
 }
