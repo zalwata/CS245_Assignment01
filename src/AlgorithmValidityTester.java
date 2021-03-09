@@ -113,8 +113,7 @@ public class AlgorithmValidityTester {
     }
 
     /**
-     * runs quick sort algorithm with the same testing array with random values
-     * to make sure this sorting algorithm produce same output as other algorithms
+     * runs quick sort algorithm with random pivot values
      * @void
      */
     public static void randomisedQuickSortValidityTesting(double[] testingArray)
@@ -122,6 +121,27 @@ public class AlgorithmValidityTester {
         Part2_1RandomizedQuicksort sortingAlgorithmObj = new Part2_1RandomizedQuicksort();
         sortingAlgorithmObj.randomisedQuicksort(testingArray);
         System.out.println("random array after sorting--------------------------------------------RANDOMISEDQUICKSORT");
+        System.out.print("[");
+        for(int i=0;i < ARRAYS_LENGTHS;i++)
+        {
+            System.out.print(testingArray[i]);
+            if(i != (ARRAYS_LENGTHS - 1))
+            {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+
+    /**
+     * runs quadratic sort algorithm
+     * @void
+     */
+    public static void quadraticSortValidityTesting(double[] testingArray)
+    {
+        Part2_2Quadraticsort sortingAlgorithmObj = new Part2_2Quadraticsort();
+        sortingAlgorithmObj.quadraticSort(testingArray);
+        System.out.println("random array after sorting--------------------------------------------------QUADRATICSORT");
         System.out.print("[");
         for(int i=0;i < ARRAYS_LENGTHS;i++)
         {
@@ -167,6 +187,9 @@ public class AlgorithmValidityTester {
 //        int[] listClone4 = testingArray.clone();
 //        int[] listClone5 = testingArray.clone();
         double[] listClone6 = testingArray.clone();
+        double[] listClone7 = testingArray.clone();
+
+
 
 
 //        bubbleSortValidityTesting(listClone1);
@@ -175,6 +198,7 @@ public class AlgorithmValidityTester {
 //        mergeSortValidityTesting(listClone4);
 //        quickSortValidityTesting(listClone5);
         randomisedQuickSortValidityTesting(listClone6);
+        quadraticSortValidityTesting(listClone7);
     }
 
 }

@@ -141,8 +141,12 @@ public class Part2_1RandomizedQuicksort {
 
     public int quicksort(double arr[], int left, int right)
     {
-        int randomNum = new Random().nextInt((right - left + 1) + left) ;
-        double randomisedPivot = arr[randomNum];
+        if(right - left > 2)
+        {
+            int randomNum = new Random().nextInt((right - left + 1) + left) ;
+            double randomisedPivot = arr[randomNum];
+        }
+        double randomisedPivot = arr[right];
 
         int pivotIndexVal = left;
 
