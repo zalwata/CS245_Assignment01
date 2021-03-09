@@ -43,7 +43,7 @@ public class SortingRunTimeTester {
      * runs selection sort algorithm with the same testing array with random values
      * @return measured time in milli seconds
      */
-    public static double selectionSortEfficiencyTesting(int[] testingArray)
+    public static double selectionSortEfficiencyTesting(double[] testingArray)
     {
         double recordingStartTime = 0;
         double recordingEndTime = 0;
@@ -109,7 +109,7 @@ public class SortingRunTimeTester {
         {
             testingArray = createRandomArray(testingArray);
             double[] listClone1 = testingArray.clone();
-//            int[] listClone2 = testingArray.clone();
+            double[] listClone2 = testingArray.clone();
 //            int[] listClone3 = testingArray.clone();
 //            int[] listClone4 = testingArray.clone();
 //            int[] listClone5 = testingArray.clone();
@@ -118,9 +118,9 @@ public class SortingRunTimeTester {
             System.out.print("bubble sort run-time(ms):    ");
             System.out.println(bubbleSortEfficiencyTesting(listClone1));
 
-//            System.out.print("selection sort run-time(ms): ");
-//            System.out.println(selectionSortEfficiencyTesting(listClone2));
-//
+            System.out.print("selection sort run-time(ms): ");
+            System.out.println(selectionSortEfficiencyTesting(listClone2));
+
 //            System.out.print("insertion sort run-time(ms): ");
 //            System.out.println(insertionSortEfficiencyTesting(listClone3));
 //

@@ -14,7 +14,7 @@ public class SelectionSort {
      * finds the smallest value in the array
      * @return smallest value from the array
      */
-    public int findSmallestValue(int[] inputArray, int initVal)
+    public int findSmallestValue(double[] inputArray, int initVal)
     {
         int smallestValue = initVal;
         for(int i = initVal + 1; i < inputArray.length; i++)
@@ -31,9 +31,9 @@ public class SelectionSort {
      * swap index positions of two values in the array
      * @return array after the swap
      */
-    public int[] swap(int[] inputArray, int startVal , int endVal)
+    public double[] swap(double[] inputArray, int startVal , int endVal)
     {
-        int tempVal = inputArray[startVal];
+        double tempVal = inputArray[startVal];
         inputArray[startVal] = inputArray [endVal];
         inputArray[endVal] = tempVal;
         return inputArray;
@@ -43,7 +43,7 @@ public class SelectionSort {
      * initialize selection sort algorithm
      * @void
      */
-    public void selectionSort(int[] randomArray)
+    public void selectionSort(double[] randomArray)
     {
         for(int i = 0; i < randomArray.length; i++)
         {
