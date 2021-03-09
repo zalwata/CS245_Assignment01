@@ -63,7 +63,7 @@ public class QuickSort {
      * initialize quick sort
      * @void
      */
-    public void quickSort(int[] randomArray)
+    public void quickSort(double[] randomArray)
     {
         quickSort(randomArray, 0, randomArray.length);
     }
@@ -73,7 +73,7 @@ public class QuickSort {
      * pick pivot from median value
      * @void
      */
-    public void quickSort(int[] testingArray, int leftValue, int rightValue) {
+    public void quickSort(double[] testingArray, int leftValue, int rightValue) {
         int medianPivotIndex = 0;
         if (rightValue - leftValue < 2) {
             return;
@@ -91,8 +91,8 @@ public class QuickSort {
      * move pivot to testingArray[top]
      * @void
      */
-    public int partitionAroundThePivot(int[] testingArray, int leftValue, int rightValue) {
-        int pivot = testingArray[leftValue];
+    public int partitionAroundThePivot(double[] testingArray, int leftValue, int rightValue) {
+        double pivot = testingArray[leftValue];
         int bot = leftValue;
         int top = rightValue;
         while (bot < top) {

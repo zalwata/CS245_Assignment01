@@ -77,7 +77,7 @@ public class SortingRunTimeTester {
      * runs quick sort algorithm with the same testing array with random values
      * @return measured time in milli seconds
      */
-    public static double quickSortEfficiencyTesting(int[] testingArray)
+    public static double quickSortEfficiencyTesting(double[] testingArray)
     {
         double recordingStartTime = 0;
         double recordingEndTime = 0;
@@ -112,7 +112,7 @@ public class SortingRunTimeTester {
             double[] listClone2 = testingArray.clone();
             double[] listClone3 = testingArray.clone();
             double[] listClone4 = testingArray.clone();
-//            int[] listClone5 = testingArray.clone();
+            double[] listClone5 = testingArray.clone();
 
             System.out.println("array size: " + ARRAYS_LENGTHS + "---------------------------------------------------");
             System.out.print("bubble sort run-time(ms):    ");
@@ -127,8 +127,8 @@ public class SortingRunTimeTester {
             System.out.print("merge sort run-time(ms):     ");
             System.out.println(mergeSortEfficiencyTesting(listClone4));
 //
-//            System.out.print("quick sort run-time(ms):     ");
-//            System.out.println(quickSortEfficiencyTesting(listClone5));
+            System.out.print("quick sort run-time(ms):     ");
+            System.out.println(quickSortEfficiencyTesting(listClone5));
 
             ARRAYS_LENGTHS = ARRAYS_LENGTHS + 50000;
         }
