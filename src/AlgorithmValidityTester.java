@@ -210,7 +210,7 @@ public class AlgorithmValidityTester {
         double[] listClone3 = testingArray.clone();
         double[] listClone4 = testingArray.clone();
         double[] listClone5 = testingArray.clone();
-//        double[] listClone6 = testingArray.clone();
+        double[] listClone6 = testingArray.clone();
 //        double[] listClone7 = testingArray.clone();
 
 
@@ -221,7 +221,7 @@ public class AlgorithmValidityTester {
         selectionSortValidityTesting(listClone2);
         mergeSortValidityTesting(listClone4);
         quickSortValidityTesting(listClone5);
-//        randomisedQuickSortValidityTesting(listClone6);
+        randomisedQuickSortValidityTesting(listClone6);
 //        quadraticSortValidityTesting(listClone7);
 //        modifiedQuadraticSortValidityTesting(listClone7);
     }

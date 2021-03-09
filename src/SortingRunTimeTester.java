@@ -90,6 +90,23 @@ public class SortingRunTimeTester {
         return algorithmRunTime;
     }
 
+    /**
+     * runs quick sort algorithm with the same testing array with random values
+     * @return measured time in milli seconds
+     */
+    public static double randomisedQuickSortEfficiencyTesting(double[] testingArray)
+    {
+        double recordingStartTime = 0;
+        double recordingEndTime = 0;
+        double algorithmRunTime = 0;
+        Part2_1RandomizedQuicksort sortingAlgorithmObj = new Part2_1RandomizedQuicksort();
+        recordingStartTime = System.currentTimeMillis();
+        sortingAlgorithmObj.randomisedQuicksort(testingArray);
+        recordingEndTime = System.currentTimeMillis();
+        algorithmRunTime = ((recordingEndTime - recordingStartTime)) / ARRAYS_LENGTHS;
+        return algorithmRunTime;
+    }
+
     //generate array with random values
     public static double[] createRandomArray(double[] testingArray)
     {
@@ -113,6 +130,8 @@ public class SortingRunTimeTester {
             double[] listClone3 = testingArray.clone();
             double[] listClone4 = testingArray.clone();
             double[] listClone5 = testingArray.clone();
+            double[] listClone6 = testingArray.clone();
+
 
             System.out.println("array size: " + ARRAYS_LENGTHS + "---------------------------------------------------");
             System.out.print("bubble sort run-time(ms):    ");
@@ -129,6 +148,9 @@ public class SortingRunTimeTester {
 //
             System.out.print("quick sort run-time(ms):     ");
             System.out.println(quickSortEfficiencyTesting(listClone5));
+
+            System.out.print("randomised quick sort run-time(ms):     ");
+            System.out.println(randomisedQuickSortEfficiencyTesting(listClone6));
 
             ARRAYS_LENGTHS = ARRAYS_LENGTHS + 50000;
         }
