@@ -37,10 +37,10 @@ public class InsertionSort {
      * initialize insertion sort algorithm
      * @void
      */
-    public void insertionSort(int[] randomArray)
+    public void insertionSort(double[] randomArray)
     {
         int i = 0;
-        int newValue = 0;
+        double newValue = 0;
         for(int unsorted = 1; unsorted < randomArray.length; unsorted++)
         {
             newValue = randomArray[unsorted];

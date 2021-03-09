@@ -26,7 +26,7 @@ public class SortingRunTimeTester {
      * runs insertion sort algorithm with the same testing array with random values
      * @return measured time in milli seconds
      */
-    public static double insertionSortEfficiencyTesting(int[] testingArray)
+    public static double insertionSortEfficiencyTesting(double[] testingArray)
     {
         double recordingStartTime = 0;
         double recordingEndTime = 0;
@@ -110,7 +110,7 @@ public class SortingRunTimeTester {
             testingArray = createRandomArray(testingArray);
             double[] listClone1 = testingArray.clone();
             double[] listClone2 = testingArray.clone();
-//            int[] listClone3 = testingArray.clone();
+            double[] listClone3 = testingArray.clone();
 //            int[] listClone4 = testingArray.clone();
 //            int[] listClone5 = testingArray.clone();
 
@@ -121,8 +121,8 @@ public class SortingRunTimeTester {
             System.out.print("selection sort run-time(ms): ");
             System.out.println(selectionSortEfficiencyTesting(listClone2));
 
-//            System.out.print("insertion sort run-time(ms): ");
-//            System.out.println(insertionSortEfficiencyTesting(listClone3));
+            System.out.print("insertion sort run-time(ms): ");
+            System.out.println(insertionSortEfficiencyTesting(listClone3));
 //
 //            System.out.print("merge sort run-time(ms):     ");
 //            System.out.println(mergeSortEfficiencyTesting(listClone4));

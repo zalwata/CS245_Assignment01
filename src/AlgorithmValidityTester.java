@@ -31,7 +31,7 @@ public class AlgorithmValidityTester {
      * to make sure this sorting algorithm produce same output as other algorithms
      * @void
      */
-    public static void insertionSortValidityTesting(int[] testingArray)
+    public static void insertionSortValidityTesting(double[] testingArray)
     {
         InsertionSort sortingAlgorithmObj = new InsertionSort();
         sortingAlgorithmObj.insertionSort(testingArray);
@@ -207,7 +207,7 @@ public class AlgorithmValidityTester {
         //run time analysis on each sorting algorithm
         double[] listClone1 = testingArray.clone();
         double[] listClone2 = testingArray.clone();
-//        int[] listClone3 = testingArray.clone();
+        double[] listClone3 = testingArray.clone();
 //        int[] listClone4 = testingArray.clone();
 //        int[] listClone5 = testingArray.clone();
 //        double[] listClone6 = testingArray.clone();
@@ -217,7 +217,7 @@ public class AlgorithmValidityTester {
 
 
         bubbleSortValidityTesting(listClone1);
-//        insertionSortValidityTesting(listClone2);
+        insertionSortValidityTesting(listClone3);
         selectionSortValidityTesting(listClone2);
 //        mergeSortValidityTesting(listClone4);
 //        quickSortValidityTesting(listClone5);
