@@ -42,7 +42,7 @@ public class MergeSort {
      * redistribute merge sort algorithm to make sure items in the array are arranged
      * @void
      */
-    public void mergeSortInit(int[] testingArray, int leftValue, int rightValue)
+    public void mergeSortInit(double[] testingArray, int leftValue, int rightValue)
     {
         int middleValue = 0;
         //base case for organizing
@@ -61,19 +61,19 @@ public class MergeSort {
      * then merge two adjacent sub-arrays, keeping sorted order
      * @void
      */
-    public void mergeThePartitionedArrays(int[] testingArray, int leftValue, int middleValue, int rightValue)
+    public void mergeThePartitionedArrays(double[] testingArray, int leftValue, int middleValue, int rightValue)
     {
         int partitioningIndex = 0;
         int leftPartitionIndex = 0;
         int rightPartitionIndex = 0;
-        int[] partitioningArray;
+        double[] partitioningArray;
         if(testingArray[middleValue - 1] <= testingArray[middleValue])
         {
             return;
         }
         leftPartitionIndex = leftValue;
         rightPartitionIndex = middleValue;
-        partitioningArray = new int[rightValue - leftValue];
+        partitioningArray = new double[rightValue - leftValue];
         while((leftPartitionIndex < middleValue) && (rightPartitionIndex < rightValue))
         {
             if(testingArray[leftPartitionIndex] <= testingArray[rightPartitionIndex])
@@ -96,7 +96,7 @@ public class MergeSort {
      * initialize merge sort
      * @void
      */
-    public void mergeSort(int[] randomArray)
+    public void mergeSort(double[] randomArray)
     {
         mergeSortInit(randomArray, 0, randomArray.length);
     }

@@ -60,7 +60,7 @@ public class SortingRunTimeTester {
      * runs merge sort algorithm with the same testing array with random values
      * @return measured time in milli seconds
      */
-    public static double mergeSortEfficiencyTesting(int[] testingArray)
+    public static double mergeSortEfficiencyTesting(double[] testingArray)
     {
         double recordingStartTime = 0;
         double recordingEndTime = 0;
@@ -111,7 +111,7 @@ public class SortingRunTimeTester {
             double[] listClone1 = testingArray.clone();
             double[] listClone2 = testingArray.clone();
             double[] listClone3 = testingArray.clone();
-//            int[] listClone4 = testingArray.clone();
+            double[] listClone4 = testingArray.clone();
 //            int[] listClone5 = testingArray.clone();
 
             System.out.println("array size: " + ARRAYS_LENGTHS + "---------------------------------------------------");
@@ -124,8 +124,8 @@ public class SortingRunTimeTester {
             System.out.print("insertion sort run-time(ms): ");
             System.out.println(insertionSortEfficiencyTesting(listClone3));
 //
-//            System.out.print("merge sort run-time(ms):     ");
-//            System.out.println(mergeSortEfficiencyTesting(listClone4));
+            System.out.print("merge sort run-time(ms):     ");
+            System.out.println(mergeSortEfficiencyTesting(listClone4));
 //
 //            System.out.print("quick sort run-time(ms):     ");
 //            System.out.println(quickSortEfficiencyTesting(listClone5));

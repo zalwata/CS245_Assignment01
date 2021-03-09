@@ -75,7 +75,7 @@ public class AlgorithmValidityTester {
      * to make sure this sorting algorithm produce same output as other algorithms
      * @void
      */
-    public static void mergeSortValidityTesting(int[] testingArray)
+    public static void mergeSortValidityTesting(double[] testingArray)
     {
         MergeSort sortingAlgorithmObj = new MergeSort();
         sortingAlgorithmObj.mergeSort(testingArray);
@@ -208,7 +208,7 @@ public class AlgorithmValidityTester {
         double[] listClone1 = testingArray.clone();
         double[] listClone2 = testingArray.clone();
         double[] listClone3 = testingArray.clone();
-//        int[] listClone4 = testingArray.clone();
+        double[] listClone4 = testingArray.clone();
 //        int[] listClone5 = testingArray.clone();
 //        double[] listClone6 = testingArray.clone();
 //        double[] listClone7 = testingArray.clone();
@@ -219,7 +219,7 @@ public class AlgorithmValidityTester {
         bubbleSortValidityTesting(listClone1);
         insertionSortValidityTesting(listClone3);
         selectionSortValidityTesting(listClone2);
-//        mergeSortValidityTesting(listClone4);
+        mergeSortValidityTesting(listClone4);
 //        quickSortValidityTesting(listClone5);
 //        randomisedQuickSortValidityTesting(listClone6);
 //        quadraticSortValidityTesting(listClone7);
