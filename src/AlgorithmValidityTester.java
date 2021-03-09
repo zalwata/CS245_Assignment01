@@ -154,6 +154,28 @@ public class AlgorithmValidityTester {
         System.out.println("]");
     }
 
+    /**
+     * runs modified quadratic sort algorithm
+     * @void
+     */
+    public static void modifiedQuadraticSortValidityTesting(double[] testingArray)
+    {
+        testingArray = new double[]{2,5,9,6,8,3,7,12};
+        Part2_3ModifiedQuadraticsort sortingAlgorithmObj = new Part2_3ModifiedQuadraticsort();
+        sortingAlgorithmObj.quadraticsort(testingArray, 1, 6);
+        System.out.println("random array after sorting------------------------------------------MODIFIEDQUADRATICSORT");
+        System.out.print("[");
+        for(int i=0;i < ARRAYS_LENGTHS;i++)
+        {
+            System.out.print(testingArray[i]);
+            if(i != (ARRAYS_LENGTHS - 1))
+            {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+
     public static void main(String[] args) {
 
         //generate array with random values
@@ -199,6 +221,7 @@ public class AlgorithmValidityTester {
 //        quickSortValidityTesting(listClone5);
         randomisedQuickSortValidityTesting(listClone6);
         quadraticSortValidityTesting(listClone7);
+        modifiedQuadraticSortValidityTesting(listClone7);
     }
 
 }
