@@ -3,13 +3,13 @@ import java.util.Random;
 public class SortingRunTimeTester {
 
     public static int ARRAYS_LENGTHS = 50000;
-    public static int[] testingArray = new int[ARRAYS_LENGTHS];
+    public static double[] testingArray = new double[ARRAYS_LENGTHS];
 
     /**
      * runs bubble sort algorithm with the same testing array with random values
      * @return measured time in milli seconds
      */
-    public static double bubbleSortEfficiencyTesting(int[] testingArray)
+    public static double bubbleSortEfficiencyTesting(double[] testingArray)
     {
         double recordingStartTime = 0;
         double recordingEndTime = 0;
@@ -91,9 +91,9 @@ public class SortingRunTimeTester {
     }
 
     //generate array with random values
-    public static int[] createRandomArray(int[] testingArray)
+    public static double[] createRandomArray(double[] testingArray)
     {
-        testingArray = new int[ARRAYS_LENGTHS];
+        testingArray = new double[ARRAYS_LENGTHS];
         Random randomValueGenerator = new Random();
         for(int i=0;i < ARRAYS_LENGTHS;i++)
         {
@@ -108,27 +108,27 @@ public class SortingRunTimeTester {
         for(int i = 0; i < 10; i++)
         {
             testingArray = createRandomArray(testingArray);
-            int[] listClone1 = testingArray.clone();
-            int[] listClone2 = testingArray.clone();
-            int[] listClone3 = testingArray.clone();
-            int[] listClone4 = testingArray.clone();
-            int[] listClone5 = testingArray.clone();
+            double[] listClone1 = testingArray.clone();
+//            int[] listClone2 = testingArray.clone();
+//            int[] listClone3 = testingArray.clone();
+//            int[] listClone4 = testingArray.clone();
+//            int[] listClone5 = testingArray.clone();
 
             System.out.println("array size: " + ARRAYS_LENGTHS + "---------------------------------------------------");
             System.out.print("bubble sort run-time(ms):    ");
             System.out.println(bubbleSortEfficiencyTesting(listClone1));
 
-            System.out.print("selection sort run-time(ms): ");
-            System.out.println(selectionSortEfficiencyTesting(listClone2));
-
-            System.out.print("insertion sort run-time(ms): ");
-            System.out.println(insertionSortEfficiencyTesting(listClone3));
-
-            System.out.print("merge sort run-time(ms):     ");
-            System.out.println(mergeSortEfficiencyTesting(listClone4));
-
-            System.out.print("quick sort run-time(ms):     ");
-            System.out.println(quickSortEfficiencyTesting(listClone5));
+//            System.out.print("selection sort run-time(ms): ");
+//            System.out.println(selectionSortEfficiencyTesting(listClone2));
+//
+//            System.out.print("insertion sort run-time(ms): ");
+//            System.out.println(insertionSortEfficiencyTesting(listClone3));
+//
+//            System.out.print("merge sort run-time(ms):     ");
+//            System.out.println(mergeSortEfficiencyTesting(listClone4));
+//
+//            System.out.print("quick sort run-time(ms):     ");
+//            System.out.println(quickSortEfficiencyTesting(listClone5));
 
             ARRAYS_LENGTHS = ARRAYS_LENGTHS + 50000;
         }

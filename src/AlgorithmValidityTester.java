@@ -1,13 +1,15 @@
+import java.util.Random;
+
 public class AlgorithmValidityTester {
 
-    public static int ARRAYS_LENGTHS = 8;
+    public static int ARRAYS_LENGTHS = 5;
 
     /**
      * runs bubble sort algorithm with the same testing array with random values
      * to make sure this sorting algorithm produce same output as other algorithms
      * @void
      */
-    public static void bubbleSortValidityTesting(int[] testingArray)
+    public static void bubbleSortValidityTesting(double[] testingArray)
     {
         BubbleSort sortingAlgorithmObj = new BubbleSort();
         sortingAlgorithmObj.bubbleSort(testingArray);
@@ -179,14 +181,14 @@ public class AlgorithmValidityTester {
     public static void main(String[] args) {
 
         //generate array with random values
-        double[] testingArray = new double[]{5,2,9,12,6,8,3,7};
+//        double[] testingArray = new double[]{5,2,9,12,6,8,3,7};
 
-//        int[] testingArray = new int[ARRAYS_LENGTHS];
-//        Random randomValueGenerator = new Random();
-//        for(int i=0;i < ARRAYS_LENGTHS;i++)
-//        {
-//            testingArray[i] = randomValueGenerator.nextInt();
-//        }
+        double[] testingArray = new double[ARRAYS_LENGTHS];
+        Random randomValueGenerator = new Random();
+        for(int i=0;i < ARRAYS_LENGTHS;i++)
+        {
+            testingArray[i] = randomValueGenerator.nextDouble();
+        }
 
         System.out.println("array size: " + AlgorithmValidityTester.ARRAYS_LENGTHS);
         //print the random array before sorting
@@ -203,25 +205,25 @@ public class AlgorithmValidityTester {
         System.out.println("]");
 
         //run time analysis on each sorting algorithm
-//        int[] listClone1 = testingArray.clone();
+        double[] listClone1 = testingArray.clone();
 //        int[] listClone2 = testingArray.clone();
 //        int[] listClone3 = testingArray.clone();
 //        int[] listClone4 = testingArray.clone();
 //        int[] listClone5 = testingArray.clone();
-        double[] listClone6 = testingArray.clone();
-        double[] listClone7 = testingArray.clone();
+//        double[] listClone6 = testingArray.clone();
+//        double[] listClone7 = testingArray.clone();
 
 
 
 
-//        bubbleSortValidityTesting(listClone1);
+        bubbleSortValidityTesting(listClone1);
 //        insertionSortValidityTesting(listClone2);
 //        selectionSortValidityTesting(listClone3);
 //        mergeSortValidityTesting(listClone4);
 //        quickSortValidityTesting(listClone5);
-        randomisedQuickSortValidityTesting(listClone6);
-        quadraticSortValidityTesting(listClone7);
-        modifiedQuadraticSortValidityTesting(listClone7);
+//        randomisedQuickSortValidityTesting(listClone6);
+//        quadraticSortValidityTesting(listClone7);
+//        modifiedQuadraticSortValidityTesting(listClone7);
     }
 
 }

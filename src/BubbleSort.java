@@ -26,7 +26,7 @@ public class BubbleSort {
      * initialize bubble sort algorithm
      * @void
      */
-    public void bubbleSort(int[] randomArray)
+    public void bubbleSort(double[] randomArray)
     {
         for(int unsorted = randomArray.length - 1; unsorted > 0; unsorted--)
         {
@@ -44,9 +44,9 @@ public class BubbleSort {
      * swap index positions of two values in the array
      * @return array after the swap
      */
-    public int[] swap(int[] inputArray, int startVal , int endVal)
+    public double[] swap(double[] inputArray, int startVal , int endVal)
     {
-        int tempVal = inputArray[startVal];
+        double tempVal = inputArray[startVal];
         inputArray[startVal] = inputArray [endVal];
         inputArray[endVal] = tempVal;
         return inputArray;
