@@ -46,4 +46,4 @@ Here's a walkthrough of randomised quicksort vs quadratic sort for array size 25
 
 ## Notes
 
-* toString() implementation isn't ideal.
+* experimental data is not consistant upon repetition.
