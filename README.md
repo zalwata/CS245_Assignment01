@@ -16,7 +16,7 @@ Here's a walkthrough of implementation:
 
 <img src='http://g.recordit.co/LN7X69JXrf.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-Here's a walkthrough of contructed chart:
+Here's a walkthrough of contructed chart(as seen in the chart below, among quadratic sort algorithms, insertion sort performs the best - used in part 2.2 due to such reason):
 
 <img src='http://g.recordit.co/lWMA3VyvLl.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
