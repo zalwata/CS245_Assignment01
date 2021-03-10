@@ -39,7 +39,7 @@ Here's a walkthrough of randomised quicksort vs quadratic sort for array size 25
 
 <img src='http://g.recordit.co/UhoUBfiQIq.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-Here's a walkthrough of randomised quicksort vs quadratic sort for array size 2500 ~ 50,000:
+Here's a walkthrough of randomised quicksort vs quadratic sort for array size 2500 ~ 50,000 to determine threshhold length of the array when the quadratic sort algorithm takes over from the quicksort algorithm:
 
 <img src='http://g.recordit.co/eIpXYCFNtL.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
