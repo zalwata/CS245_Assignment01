@@ -178,6 +178,27 @@ public class AlgorithmValidityTester {
         System.out.println("]");
     }
 
+    /**
+     * runs modified quadratic sort algorithm
+     * @void
+     */
+    public static void hybridSortValidityTesting(double[] testingArray)
+    {
+        Part2_4HybridAlgorithm sortingAlgorithmObj = new Part2_4HybridAlgorithm();
+        sortingAlgorithmObj.initHybridsort(testingArray);
+        System.out.println("random array after sorting-----------------------------------------------------HYBRIDSORT");
+        System.out.print("[");
+        for(int i=0;i < ARRAYS_LENGTHS;i++)
+        {
+            System.out.print(testingArray[i]);
+            if(i != (ARRAYS_LENGTHS - 1))
+            {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+
     public static void main(String[] args) {
 
         //generate array with random values
@@ -211,9 +232,8 @@ public class AlgorithmValidityTester {
         double[] listClone4 = testingArray.clone();
         double[] listClone5 = testingArray.clone();
         double[] listClone6 = testingArray.clone();
-//        double[] listClone7 = testingArray.clone();
-
-
+        double[] listClone7 = testingArray.clone();
+        double[] listClone8 = testingArray.clone();
 
 
         bubbleSortValidityTesting(listClone1);
@@ -222,8 +242,9 @@ public class AlgorithmValidityTester {
         mergeSortValidityTesting(listClone4);
         quickSortValidityTesting(listClone5);
         randomisedQuickSortValidityTesting(listClone6);
-//        quadraticSortValidityTesting(listClone7);
+        quadraticSortValidityTesting(listClone7);
 //        modifiedQuadraticSortValidityTesting(listClone7);
+        hybridSortValidityTesting(listClone8);
     }
 
 }

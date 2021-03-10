@@ -12,6 +12,31 @@
 
 public class Part2_4HybridAlgorithm {
 
+    public void initHybridsort (double[] arr)
+    {
+        int left = 0;
+        int right = arr.length;
+        Part2_4HybridAlgorithm sortingAlgorithmObj = new Part2_4HybridAlgorithm();
+        sortingAlgorithmObj.hybridsort(arr, left, right);
+    }
+
+    public void hybridsort (double[] arr, int left, int right)
+    {
+
+        int threshholdLength = 2500;
+        if((right - left) <= threshholdLength)
+        {
+            Part2_3ModifiedQuadraticsort sortingAlgorithmObj = new Part2_3ModifiedQuadraticsort();
+            sortingAlgorithmObj.quadraticsort(arr, left, right);
+        } else
+        {
+            Part2_1RandomizedQuicksort sortingAlgorithmObj = new Part2_1RandomizedQuicksort();
+            sortingAlgorithmObj.randomisedQuicksort(arr);
+        }
+    }
+
+
+
 
 
 }

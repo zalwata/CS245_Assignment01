@@ -132,12 +132,6 @@ public class Part2_1RandomizedQuicksort {
         public int getRightVal() { return rightVal; }
     }
 
-    public void swap (double[] arr, int left, int right)
-    {
-        double temp = arr[left];
-        arr[left] = arr[right];
-        arr[right] = temp;
-    }
 
     public int quicksort(double arr[], int left, int right)
     {
@@ -168,17 +162,17 @@ public class Part2_1RandomizedQuicksort {
     {
         Stack<CoupledInterval> sortedList = new Stack<>();
 
-        int left = 0;
         int right = arr.length - 1;
+        int left = 0;
 
         sortedList.push(new CoupledInterval(left, right));
 
         while (!sortedList.empty())
         {
-            left = sortedList.peek().getLeftVal();
             right = sortedList.peek().getRightVal();
-            sortedList.pop();
+            left = sortedList.peek().getLeftVal();
 
+            sortedList.pop();
             int pivot = quicksort(arr, left, right);
 
             if (pivot - 1 > left) {
@@ -190,6 +184,14 @@ public class Part2_1RandomizedQuicksort {
             }
         }
     }
+
+    public void swap (double[] arr, int left, int right)
+    {
+        double tmp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = tmp;
+    }
+
 
 
 
