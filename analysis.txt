@@ -1,17 +1,146 @@
 Part 1:
 Bubble sort: running time 
-* run time is  θ(n) because there are 2 separate for-loops that contains 7 lines of code execute "n" times and 8 lines of code executed exactly once, 
-the run-time is considered to be θ(n) + θ(n) + θ(n) + θ(n) + θ(n) + θ(n) + θ(n) + 8 = θ(7n) + 8. If factors or constant/low order terms are eliminated, θ(n) as the run-time.
-  * 8 lines executed exactly once
-  * 7 lines of code executed "n" times 
-  * Total: 8 + 7*n
-  * Simplify to: θ(n)
+* run time is  θ(n^2) because there are for-loop and 1 nested for-loops that contains 6 lines of code execute "n" times and 2 lines of code executed exactly once, 
+the run-time is considered to be (θ(n) + θ(n))( θ(n) + θ(n) + θ(n) + θ(n)) + 2 = θ(8n^2) + 2. If factors or constant/low order terms are eliminated, θ(n^2) as the run-time.
+  * 2 lines executed exactly once
+  * 6 lines of code executed "n" times 
+  * Total: (8n^2) + 2
+  * Simplify to: θ(n^2)
 
 Bubble sort: space requirement
-* space requirement is  θ(n) because there are 1 array variable declaration in terms of the size of the input, "n" and 4 new/declared variables, 
+* space requirement is  θ(1) because there are 0 array variable declaration in terms of the size of the input, "n" and 3 new/declared variables, 
+the space requirement is considered to be θ(1) + 3 = θ(1) + 3. If factors or constant/low order terms are eliminated, θ(1) as the space requirement.
+  * 3 variables declared
+  * 0 array declaration 
+  * Total: 3 + 0
+  * Simplify to: θ(1)
+
+Selection sort: running time 
+* run time is  θ(n^2) because there are 1 for-loop and 1 nested for-loops that contains 7 lines of code execute "n" times and 8 lines of code executed exactly once, 
+the run-time is considered to be (θ(n) + θ(n))( θ(n) + θ(n) + θ(n) + θ(n) + θ(n)) + 8 = θ(10n^2) + 8. If factors or constant/low order terms are eliminated, θ(n^2) as the run-time.
+  * 8 lines executed exactly once
+  * 7 lines of code executed "n" times 
+  * Total: θ(10n^2) + 8
+  * Simplify to: θ(n^2)
+
+Selection sort: space requirement
+* space requirement is  θ(1) because there are 0 array variable declaration in terms of the size of the input, "n" and 4 new/declared variables, 
+the space requirement is considered to be θ(1) + 4 = θ(1) + 4. If factors or constant/low order terms are eliminated, θ(1) as the space requirement.
+  * 4 variables declared
+  * 0 array declaration 
+  * Total: 4 + 0
+  * Simplify to: θ(1)
+  
+Insertion sort: running time 
+* run time is  θ(n^2) because there are 1 for-loop and 1 nested for-loops that contains 7 lines of code execute "n" times and 4 lines of code executed exactly once, 
+the run-time is considered to be (θ(n) + θ(n))( θ(n) + θ(n) + θ(n) + θ(n) + θ(n)) + 4 = θ(10n^2) + 4. If factors or constant/low order terms are eliminated, θ(n^2) as the run-time.
+  * 4 lines executed exactly once
+  * 7 lines of code executed "n" times 
+  * Total: θ(10n^2) + 4
+  * Simplify to: θ(n^2)
+
+Insertion sort: space requirement
+* space requirement is  θ(1) because there are 0 array variable declaration in terms of the size of the input, "n" and 3 new/declared variables, 
+the space requirement is considered to be θ(1) + 3 = θ(1) + 3. If factors or constant/low order terms are eliminated, θ(1) as the space requirement.
+  * 3 variables declared
+  * 0 array declaration 
+  * Total: 3 + 0
+  * Simplify to: θ(1)
+
+Merge sort: running time 
+* run time is  θ(n log n) because there are 1 while-loop and 2 recursive calls that contains 4 lines of code execute "log n" times and 8 lines of code executed exactly once, 
+the run-time is considered to be (θ(log n) + θ(log n))( θ(log n) + θ(log n) + + θ(log n) + + θ(log n)) + 8 = θ(n log n) + 8. If factors or constant/low order terms are eliminated, θ(n log n) as the run-time.
+  * 8 lines executed exactly once
+  * 2 recursive calls that contains 4 lines of code execute "log n" times 
+  * Total: θ(n log n) + 8
+  * Simplify to: θ(n log n)
+
+Merge sort: space requirement
+* space requirement is  θ(n) because there are recursive array variable declaration in terms of the size of the input, "n" and 4 new/declared variables, 
 the space requirement is considered to be θ(n) + 4 = θ(n) + 4. If factors or constant/low order terms are eliminated, θ(n) as the space requirement.
   * 4 variables declared
-  * 1 array declaration 
-  * Total: 4 + 1*n
+  * n array declaration 
+  * Total: 4 + 0
   * Simplify to: θ(n)
   
+Quick sort: running time 
+* run time is  θ(n log n) because there are 2 while-loops and 2 recursive calls that contains 6 lines of code execute "log n" times and 5 lines of code executed exactly once, 
+the run-time is considered to be (θ(log n) + θ(log n))( θ(log n) + θ(log n) + + θ(log n) + + θ(log n)) + 5 = θ(n log n) + 5. If factors or constant/low order terms are eliminated, θ(n log n) as the run-time.
+  * 5 lines executed exactly once
+  * 2 recursive calls that contains 6 lines of code execute "log n" times 
+  * Total: θ(n log n) + 6
+  * Simplify to: θ(n log n)
+
+Quick sort: space requirement
+* space requirement is  θ(n log n) because there are recursive array variable declaration in terms of the size of the input, "log n" and 4 new/declared variables, 
+the space requirement is considered to be (log n)(log n+(log n)) + 4 = θ(n log n) + 4. If factors or constant/low order terms are eliminated, θ(n log n) as the space requirement.
+  * 4 variables declared
+  * log n array declaration 
+  * Total: θ(n log n) + 4
+  * Simplify to: θ(n log n)
+
+Part 2:
+Randomised Quick sort: running time 
+* run time is  θ(n log n) because there are 2 while-loops and 2 recursive calls that contains 6 lines of code execute "log n" times and 5 lines of code executed exactly once, 
+the run-time is considered to be (θ(log n) + θ(log n))( θ(log n) + θ(log n) + + θ(log n) + + θ(log n)) + 5 = θ(n log n) + 5. If factors or constant/low order terms are eliminated, θ(n log n) as the run-time.
+  * 5 lines executed exactly once
+  * 2 recursive calls that contains 6 lines of code execute "log n" times 
+  * Total: θ(n log n) + 6
+  * Simplify to: θ(n log n)
+
+Randomised Quick sort: space requirement
+* space requirement is  θ(n log n) because there are recursive array variable declaration in terms of the size of the input, "log n" and 4 new/declared variables, 
+the space requirement is considered to be (log n)(log n+(log n)) + 4 = θ(n log n) + 4. If factors or constant/low order terms are eliminated, θ(n log n) as the space requirement.
+  * 4 variables declared
+  * log n array declaration 
+  * Total: θ(n log n) + 4
+  * Simplify to: θ(n log n)
+
+Quadratic sort: running time 
+* run time is  θ(n^2) because there are 1 for-loop and 1 nested for-loops that contains 7 lines of code execute "n" times and 4 lines of code executed exactly once, 
+the run-time is considered to be (θ(n) + θ(n))( θ(n) + θ(n) + θ(n) + θ(n) + θ(n)) + 4 = θ(10n^2) + 4. If factors or constant/low order terms are eliminated, θ(n^2) as the run-time.
+  * 4 lines executed exactly once
+  * 7 lines of code executed "n" times 
+  * Total: θ(10n^2) + 4
+  * Simplify to: θ(n^2)
+
+Quadratic sort: space requirement
+* space requirement is  θ(1) because there are 0 array variable declaration in terms of the size of the input, "n" and 3 new/declared variables, 
+the space requirement is considered to be θ(1) + 3 = θ(1) + 3. If factors or constant/low order terms are eliminated, θ(1) as the space requirement.
+  * 3 variables declared
+  * 0 array declaration 
+  * Total: 3 + 0
+  * Simplify to: θ(1)
+  
+ Hybrid sort: running time (threshhold length < 2500)
+* run time is  θ(n^2) because there are 1 for-loop and 1 nested for-loops that contains 7 lines of code execute "n" times and 4 lines of code executed exactly once, 
+the run-time is considered to be (θ(n) + θ(n))( θ(n) + θ(n) + θ(n) + θ(n) + θ(n)) + 4 = θ(10n^2) + 4. If factors or constant/low order terms are eliminated, θ(n^2) as the run-time.
+  * 4 lines executed exactly once
+  * 7 lines of code executed "n" times 
+  * Total: θ(10n^2) + 4
+  * Simplify to: θ(n^2)
+
+Hybrid sort: space requirement (threshhold length < 2500)
+* space requirement is  θ(1) because there are 0 array variable declaration in terms of the size of the input, "n" and 3 new/declared variables, 
+the space requirement is considered to be θ(1) + 3 = θ(1) + 3. If factors or constant/low order terms are eliminated, θ(1) as the space requirement.
+  * 3 variables declared
+  * 0 array declaration 
+  * Total: 3 + 0
+  * Simplify to: θ(1)
+  
+ Hybrid sort: running time  (threshhold length > 2500)
+* run time is  θ(n log n) because there are 2 while-loops and 2 recursive calls that contains 6 lines of code execute "log n" times and 5 lines of code executed exactly once, 
+the run-time is considered to be (θ(log n) + θ(log n))( θ(log n) + θ(log n) + + θ(log n) + + θ(log n)) + 5 = θ(n log n) + 5. If factors or constant/low order terms are eliminated, θ(n log n) as the run-time.
+  * 5 lines executed exactly once
+  * 2 recursive calls that contains 6 lines of code execute "log n" times 
+  * Total: θ(n log n) + 6
+  * Simplify to: θ(n log n)
+
+ Hybrid sort: space requirement  (threshhold length > 2500)
+* space requirement is  θ(n log n) because there are recursive array variable declaration in terms of the size of the input, "log n" and 4 new/declared variables, 
+the space requirement is considered to be (log n)(log n+(log n)) + 4 = θ(n log n) + 4. If factors or constant/low order terms are eliminated, θ(n log n) as the space requirement.
+  * 4 variables declared
+  * log n array declaration 
+  * Total: θ(n log n) + 4
+  * Simplify to: θ(n log n)
+
