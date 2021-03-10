@@ -22,21 +22,22 @@ Here's a walkthrough of contructed chart:
 
 ## Part 2 - Quicker than Quicksort
 
-* [x] Requirement 1: Finished starter file WiggleSort.java
-* [x] Requirement 2: provided the running time analysis of my own code explaining my thought process 
-* [x] Requirement 3: provided comments
-* [x] Requirement 4: compiled my code and my WiggleSort function is static
+* [x] Requirement 1: Implemented a randomised version of quicksort.
+* [x] Requirement 2: Chosen quadratic sort exclusively based on the speed of the algorithm.
+* [x] Requirement 3: Implemented modified version of the quadratic sort.
+* [x] Requirement 4: Created a hybrid algorithm. 
 
 * [x] Implimentation: runs successfully with the source files and data provided. produces expected results. no deviation from the expected results.
-* [x] Decomposition: solution follows the suggestions provided.
+* [x] Efficiency: implementation is maximally efficient with respect to running time and required space.
 * [x] Style: implementation is well-commented. used intelligently-named variables and functions.
-
+* [x] Running time: implementation's true running time matches my assertion of its running time in analysis.txt.
+* [x] Space analysis: implementation's true space use matches my assertion of the amount of space actually required in analysis.txt.
 
 ## Video Walkthrough
 
-Here's a walkthrough of implementation:
+Here's a walkthrough of randomised quicksort vs quadratic sort for array size 2500 ~ 500,000:
 
-<img src='http://g.recordit.co/Gi7XnBr1Bv.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/UhoUBfiQIq.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ## Notes
