@@ -1,0 +1,17 @@
+Part 1:
+Bubble sort: running time 
+* run time is  θ(n) because there are 2 separate for-loops that contains 7 lines of code execute "n" times and 8 lines of code executed exactly once, 
+the run-time is considered to be θ(n) + θ(n) + θ(n) + θ(n) + θ(n) + θ(n) + θ(n) + 8 = θ(7n) + 8. If factors or constant/low order terms are eliminated, θ(n) as the run-time.
+  * 8 lines executed exactly once
+  * 7 lines of code executed "n" times 
+  * Total: 8 + 7*n
+  * Simplify to: θ(n)
+
+Bubble sort: space requirement
+* space requirement is  θ(n) because there are 1 array variable declaration in terms of the size of the input, "n" and 4 new/declared variables, 
+the space requirement is considered to be θ(n) + 4 = θ(n) + 4. If factors or constant/low order terms are eliminated, θ(n) as the space requirement.
+  * 4 variables declared
+  * 1 array declaration 
+  * Total: 4 + 1*n
+  * Simplify to: θ(n)
+  
