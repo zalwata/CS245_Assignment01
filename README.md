@@ -35,9 +35,13 @@ Here's a walkthrough of contructed chart:
 
 ## Video Walkthrough
 
-Here's a walkthrough of randomised quicksort vs quadratic sort for array size 2500 ~ 500,000:
+Here's a walkthrough of randomised quicksort vs quadratic sort for array size 2500 ~ 50,000:
 
 <img src='http://g.recordit.co/UhoUBfiQIq.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+Here's a walkthrough of randomised quicksort vs quadratic sort for array size 2500 ~ 50,000:
+
+<img src='http://g.recordit.co/eIpXYCFNtL.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ## Notes
